@@ -22,11 +22,6 @@ const Education = ({ data }) => {
       <div className="space-y-4">
         {data.map((edu, index) => (
           <div key={index} className="relative">
-            {/* Timeline line */}
-            {index !== data.length - 1 && (
-              <div className="absolute left-3 top-8 w-0.5 h-full bg-gradient-to-b from-indigo-300 to-purple-300 -z-10"></div>
-            )}
-
             <div className="flex gap-3">
               {/* Timeline dot */}
               <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-md">
