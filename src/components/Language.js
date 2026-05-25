@@ -36,31 +36,14 @@ const Language = ({ data }) => {
           LANGUAGE
         </h2>
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-col gap-3">
         {data.map((lang, index) => (
-          <div
-            key={index}
-            className="group relative flex flex-col items-center text-sky-600 hover:text-purple-800 transition"
-          >
-            <img
-              src={lang.icon}
-              alt={lang.name}
-              className="w-8 h-8 object-contain"
-            />
-            <span
-              className={`text-xs mt-1 px-2 py-0.5 rounded-full ${
-                lang.level === "Native"
-                  ? "bg-red-100 text-red-700"
-                  : lang.level === "Fluent"
-                  ? "bg-yellow-100 text-yellow-700"
-                  : "bg-green-100 text-green-700"
-              }`}
-            >
-              {lang.level}
-            </span>
-
-            {/* Star rating (optional to use can comment it out if want to) */}
-            <div className="flex gap-0.5 mt-1">{renderStars(lang.level)}</div>
+          <div key={index} className="flex items-center gap-3">
+            <img src={lang.icon} alt={lang.name} className="w-6 h-6 object-contain" />
+            <div className="text-sm text-gray-800">
+              <span className="font-medium">{lang.name}</span>
+              <span className="text-gray-600"> &nbsp;–&nbsp; {lang.level}</span>
+            </div>
           </div>
         ))}
       </div>

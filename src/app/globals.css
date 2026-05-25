@@ -1,17 +1,17 @@
+/* =========================
+   Tailwind + Theme Baseline
+   ========================= */
 @import "tailwindcss";
 
+/* Light theme defaults */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Auto dark mode (screen only) */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +19,134 @@
   }
 }
 
+/* Base document styles (screen) */
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif; /* or var(--font-sans) */
+}
+
+/* Optional: smoother text on Windows */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======================================
+   CV Page Canvas (screen preview)
+   ====================================== */
+.sheet {
+  width: 210mm; /* visual CV width */
+  min-height: 297mm; /* preview height */
+  background: #fff;
+  margin: 0;
+}
+
+.sheet-inner {
+  box-sizing: border-box;
+}
+
+/* Avoid mid-word splits (screen + print base) */
+.sheet * {
+  box-sizing: border-box !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+/* Nice preview on screen only */
+@media screen {
+  .sheet {
+    margin: 12px auto;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Prevent tiny gradient/hairline artifacts inside the CV preview (.sheet) on screen
+   Replace background-clip gradients with a solid accent color to avoid 1px lines. */
+.sheet .bg-clip-text,
+.sheet .bg-clip-text * {
+  background-image: none !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  color: #6d28d9 !important; /* solid purple-ish accent */
+}
+
+/* Neutralize heading borders/shadows that can render as thin lines */
+.sheet h1,
+.sheet h2,
+.sheet h3,
+.sheet h4 {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ======================================
+   Print / PDF: natural size, zero margins
+   ====================================== */
+@page {
+  size: auto; /* let route.js width/height control the page size */
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Use the same layout as screen, just remove shadow & center */
+  .sheet {
+    width: 210mm;
+    min-height: auto;
+    background: #fff;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .sheet-inner {
+    padding: 0; /* padding is handled by your React layout (px, py etc.) */
+  }
+
+  /* Tailwind gap can sometimes behave oddly in print; keep it as-is */
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Hide UI elements (download buttons, etc.) if you mark them with .no-print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Keep short labels on one line in skills (optional but nice) */
+  .skills li span {
+    white-space: nowrap;
+  }
+
+  /* Safety: no mid-word wraps */
+  .sheet * {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+}
+
+/* =========================
+   Small utility helpers
+   ========================= */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  max-width: 100%;
+  height: auto;
 }

@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* --- CV print page rules --- */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+}
+.sheet-inner {
+  padding: 0mm;
+  box-sizing: border-box;
+}
+
+/* Optional: nice preview shadow on screen */
+@media screen {
+  .sheet {
+    margin: 16px auto;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* === Print-specific fixes: avoid gradient bleed / tiny hairlines === */
+@media print {
+  /* Disable background gradients used for decorative gradient text when printing
+     — background-clip:text can sometimes produce 1px artifacts in printed/PDF output. */
+  .bg-clip-text,
+  .bg-clip-text * {
+    background-image: none !important;
+    background: none !important;
+    -webkit-text-fill-color: #000 !important;
+    color: #000 !important;
+  }
+
+  /* Ensure heading borders don't render as unexpected thin colored lines */
+  h1, h2, h3, h4 {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+}

@@ -11,15 +11,15 @@ const CV_VERSION = "IT_SUPPORT"; // Change to 'DEVELOPER' for developer version
 // ============================================
 const itSupportData = {
   headline:
-    "Support & Customer Service Professional\n(2+ years experience | Customer Support | ServiceNow | Microsoft 365)",
+    "First-line IT Support / Service Desk\n(2+ years experience | ServiceNow | Microsoft 365 | Active Directory)",
   about:
-    "Service-oriented support professional with over two years of experience working in structured, fast-paced environments. Used to handling high volumes of customer inquiries via phone and email, coordinating between teams, and ensuring issues are followed up to resolution. Strong communicator with a calm, methodical approach and a high focus on accuracy, service quality, and collaboration. Experienced with ticketing systems, Microsoft 365, and administrative workflows.",
+    "First-line IT Support professional with over two years of experience supporting users in ticket-based environments. Used to handling high ticket volumes, troubleshooting Windows and Microsoft 365 issues, and providing clear, calm support to non-technical users. Experienced with ServiceNow, Active Directory, remote support tools, and on-site hardware support and asset handling.",
 
   work: [
     {
       title: "System Developer Intern",
       company: "Kodexe, Remote",
-      period: "September 2025 – November 2025",
+      period: "September 2025 - November 2025",
       details: [
         "Collaborated with developers on fullstack web platform projects using C#, .NET, React, SQL and Umbraco CMS",
         "Assisted in debugging, testing, and deploying web applications to ensure quality and performance",
@@ -31,7 +31,7 @@ const itSupportData = {
     {
       title: "Planning Support",
       company: "Uniflex AB, Malmö",
-      period: "Jun 2024 – Jul 2024",
+      period: "Jun 2024 - Jul 2024",
       details: [
         "Created weekly planning schedules for 15+ technician teams replacing electric meters across Skåne region",
         "Booked 30+ customer appointments per week and coordinated logistics, achieving 98% on-time completion rate",
@@ -43,7 +43,7 @@ const itSupportData = {
     {
       title: "1st Line Support Agent",
       company: "Poolia AB, Malmö (Atea)",
-      period: "Aug 2022 – Jun 2024",
+      period: "Aug 2022 - Jun 2024",
       details: [
         "Resolved an average of 40+ IT support tickets daily across hardware, software, and networking issues, maintaining a 95% first-contact resolution rate",
         "Provided technical support for 500+ end users across multiple departments using remote desktop tools and ticketing systems.",

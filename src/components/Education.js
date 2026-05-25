@@ -10,7 +10,7 @@ import cvData, { theme } from "../data/cvData";
 const Education = ({ data }) => {
   return (
     <div>
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center gap-2 mt-4 mb-4">
         <div className="p-2 bg-gradient-to-br from-indigo-500 to-purple-600 rounded">
           <FaGraduationCap className="text-white text-sm" />
         </div>
