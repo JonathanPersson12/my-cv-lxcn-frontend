@@ -36,37 +36,39 @@ const Skills = ({ techSkills, softSkills }) => {
       {/* Technical Skills */}
       <div>
         <div className="flex items-center gap-2 mb-6">
-          <div className="p-1 bg-gradient-to-br from-blue-500 to-purple-600 rounded">
+          <div className="p-1 mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded">
             <FaCode className="text-white text-xs" />
           </div>
-          <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h3 className="text-lg font-bold border-b border-gray-300 pb-1 mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent sm:whitespace-nowrap">
             TECHNICAL SKILLS
           </h3>
         </div>
 
-        <div className="grid grid-cols-3 gap-6">
+        {/* slightly tighter grid so long labels wrap nicer */}
+        <div className="grid grid-cols-3 gap-8">
           {techSkills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <img
-                src={skill.icon}
-                alt={`${skill.name} icon`}
-                className="w-8 h-8 object-contain mb-2"
-              />
-              <p className="text-xs font-medium text-gray-800 mb-1">
+            <div
+              key={index}
+              className="flex flex-col items-center text-center gap-1"
+            >
+              {skill.icon && (
+                <Image
+                  src={skill.icon}
+                  alt={`${skill.name} icon`}
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                  unoptimized
+                />
+              )}
+
+              {/* smaller, centered, clean wrapping for long names */}
+              <p className="text-[10px] leading-tight font-medium text-gray-800 break-words mt-1 max-w-[100px] text-center">
                 {skill.name}
               </p>
-              {/* <span
-        className={`text-xs mt-1 px-2 py-0.5 rounded-full ${
-          skill.level === 'Beginner'
-            ? 'bg-red-100 text-red-700'
-            : skill.level === 'Intermediate'
-            ? 'bg-yellow-100 text-yellow-700'
-            : 'bg-green-100 text-green-700'
-        }`}
-      >
-        {skill.level}
-      </span> */}
-              {/* Star rating (optional to use comment it out for now) */}
+
+              {/* Level badge / stars kept commented out for now */}
+              {/* <span ...>{skill.level}</span> */}
               {/* <div className="flex gap-0.5 mt-1">{renderStars(skill.level)}</div> */}
             </div>
           ))}

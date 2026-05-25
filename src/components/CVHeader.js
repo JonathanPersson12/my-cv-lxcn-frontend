@@ -11,19 +11,33 @@ import {
 import { MdOutlineTrackChanges } from "react-icons/md";
 import cvData, { theme } from "../data/cvData";
 
-const CVHeader = ({ data }) => {
+const CVHeader = ({ data, plainImg = false }) => {
   return (
     <div className="text-center">
       {/* Profile Image */}
       <div className="relative mb-4 flex justify-center">
-        <div className="relative">
-          <Image
-            src="/cv-picturekopia.jpg"
-            alt={data.name}
-            width={120}
-            height={120}
-            className="rounded-full border-3 border-blue-500 shadow-lg"
-          />
+        <div className="relative w-40 h-40 rounded-full border-4 border-blue-500 shadow-lg overflow-hidden flex items-center justify-center">
+          {plainImg ? (
+            <img
+              src="/cv-photo.png" // Photo for CV profile stored in /public
+              alt={data.name}
+              width={160}
+              height={160}
+              className="w-full h-[96%] object-cover"
+              style={{ objectPosition: "50% 42%" }}
+            />
+          ) : (
+            <Image
+              src="/cv-photo.png" // Photo for CV profile stored in /public
+              alt={data.name}
+              width={160}
+              height={160}
+              className="w-full h-[96%] object-cover"
+              style={{ objectPosition: "50% 42%" }}
+              unoptimized // bypass Next optimizer, safer for print/Puppeteer
+              priority
+            />
+          )}
         </div>
       </div>
 
@@ -32,10 +46,21 @@ const CVHeader = ({ data }) => {
         {data.name}
       </h1>
 
-      {/* Title/Role */}
-      <p className="text-sm text-blue-600 font-semibold mb-4 px-2">
-        {data.title}
-      </p>
+      {/* Professional Headline (for IT Support version) */}
+      {data.headline ? (
+        <div className="mb-4 px-2">
+          <p className="text-base font-bold text-blue-600 leading-tight mb-0.5">
+            {data.headline.split("\n")[0]}
+          </p>
+          <p className="text-xs text-gray-600 font-medium leading-relaxed">
+            {data.headline.split("\n")[1]}
+          </p>
+        </div>
+      ) : (
+        <p className="text-sm text-blue-600 font-semibold mb-4 px-2">
+          {data.title}
+        </p>
+      )}
 
       {/* Contact Info */}
       <div className="space-y-2 text-xs text-gray-700">
