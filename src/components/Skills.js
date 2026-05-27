@@ -3,6 +3,8 @@ import { FaCode, FaUsers } from "react-icons/fa";
 import Image from "next/image";
 
 const Skills = ({ techSkills, softSkills }) => {
+  // Convert a text level into a number. The star UI is currently disabled, but
+  // this helper is kept so it can be restored without rewriting the component.
   const getSkillLevel = (level) => {
     const levels = {
       Beginner: 1,
@@ -14,6 +16,7 @@ const Skills = ({ techSkills, softSkills }) => {
     return levels[level] || 3;
   };
 
+  // Builds the small circular rating indicators when the star UI is enabled.
   const renderStars = (level) => {
     const numLevel = getSkillLevel(level);
     const stars = [];
@@ -43,7 +46,8 @@ const Skills = ({ techSkills, softSkills }) => {
           </h3>
         </div>
 
-        {/* slightly tighter grid so long labels wrap nicer */}
+        {/* The extra class names are hooks for print CSS. They keep icons and
+            labels readable in the generated PDF. */}
         <div className="grid grid-cols-3 gap-8 tech-skills-grid">
           {techSkills.map((skill, index) => (
             <div

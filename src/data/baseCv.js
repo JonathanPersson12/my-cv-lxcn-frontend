@@ -1,3 +1,6 @@
+// Data in this file is shared by every CV version. Put information here when
+// it should stay the same across job targets, such as contact details,
+// education, languages, and default soft skills.
 export const baseCv = {
   name: "Jonathan Angantyr Persson",
   contact: {

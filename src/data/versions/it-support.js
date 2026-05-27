@@ -1,5 +1,7 @@
 import { standardWork, supportSkills } from "../sharedWork";
 
+// Version-specific text for IT support roles. Shared sections such as contact,
+// education, language, and soft skills are merged in by getCvData().
 export const itSupport = {
   slug: "it-support",
   fileName: "Jonathan-IT-Support-CV.pdf",

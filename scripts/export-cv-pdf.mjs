@@ -7,6 +7,8 @@ const versions = {
   "service-practical": "Jonathan-Service-Practical-CV.pdf",
 };
 
+// The export script is intentionally small: it asks the Next.js API route to
+// render the PDF, then saves the returned bytes into the local exports folder.
 const version = process.argv[2];
 
 if (!version || !versions[version]) {
@@ -20,6 +22,8 @@ const outputPath = path.join(outputDir, versions[version]);
 
 await fs.mkdir(outputDir, { recursive: true });
 
+// Each CV version has its own API URL so the same renderer can produce
+// different job-targeted PDF files from shared layout code.
 const response = await fetch(`${baseUrl}/api/cv-pdf/${version}`);
 
 if (!response.ok) {

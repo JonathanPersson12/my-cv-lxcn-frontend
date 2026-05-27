@@ -1,5 +1,7 @@
 import { supportSkills } from "../sharedWork";
 
+// Version-specific text for practical service roles. This version narrows the
+// skill list and rewrites work details for less technical job applications.
 export const servicePractical = {
   slug: "service-practical",
   fileName: "Jonathan-Service-Practical-CV.pdf",
@@ -41,6 +43,8 @@ export const servicePractical = {
       ],
     },
   ],
+  // Reuse the shared support skills, but show only the tools most relevant for
+  // service/practical support applications.
   techSkills: supportSkills.filter((skill) =>
     ["ServiceNow", "Windows 10/11", "Microsoft 365", "Remote Desktop Tools", "Hardware Troubleshooting"].includes(skill.name)
   ),
