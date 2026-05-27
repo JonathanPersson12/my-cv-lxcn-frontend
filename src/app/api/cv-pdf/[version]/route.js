@@ -4,6 +4,8 @@ import { getCvData } from "@/data/getCvData";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// This CSS is injected only while Puppeteer renders the PDF. It overrides the
+// screen preview so the output is a strict one-page A4 document.
 const compactPdfCss = `
   @page { size: A4; margin: 0; }
 
@@ -227,6 +229,8 @@ export async function GET(req, { params }) {
   const { origin } = new URL(req.url);
   const url = `${origin}/cv/${version}?print=1`;
 
+  // Puppeteer opens the same Next page a user sees, waits for images/fonts,
+  // then asks Chromium to print that page to PDF.
   const browser = await puppeteer.launch({
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -238,24 +242,32 @@ export async function GET(req, { params }) {
     await page.goto(url, { waitUntil: "networkidle0" });
     await page.emulateMediaType("print");
 
-  await page.evaluate(async () => {
-    if (document.fonts?.ready) {
-      try { await document.fonts.ready; } catch {}
-    }
+    // Decode images before printing. Without this, profile/skill icons can be
+    // missing or half-loaded in the generated PDF.
+    await page.evaluate(async () => {
+      if (document.fonts?.ready) {
+        try {
+          await document.fonts.ready;
+        } catch {}
+      }
 
-    const imgs = Array.from(document.images);
-    await Promise.all(imgs.map(async (img) => {
-      try {
-        if (img.decode) await img.decode();
-      } catch {}
-      if (img.complete) return;
-      await new Promise((resolve) => {
-        img.addEventListener("load", resolve, { once: true });
-        img.addEventListener("error", resolve, { once: true });
-      });
-    }));
-  });
+      const imgs = Array.from(document.images);
+      await Promise.all(
+        imgs.map(async (img) => {
+          try {
+            if (img.decode) await img.decode();
+          } catch {}
+          if (img.complete) return;
+          await new Promise((resolve) => {
+            img.addEventListener("load", resolve, { once: true });
+            img.addEventListener("error", resolve, { once: true });
+          });
+        })
+      );
+    });
 
+    // Add the PDF-specific CSS after the page loads so it wins over the normal
+    // app styles during export.
     await page.addStyleTag({ content: compactPdfCss });
 
     await page.evaluate(async () => {
@@ -279,7 +291,7 @@ export async function GET(req, { params }) {
       printBackground: true,
       displayHeaderFooter: false,
       preferCSSPageSize: true,
-    margin: { top: "0mm", right: "0mm", bottom: "0mm", left: "0mm" },
+      margin: { top: "0mm", right: "0mm", bottom: "0mm", left: "0mm" },
       scale: 1,
     });
 

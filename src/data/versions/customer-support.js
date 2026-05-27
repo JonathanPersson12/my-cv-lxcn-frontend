@@ -1,5 +1,7 @@
 import { standardWork, supportSkills } from "../sharedWork";
 
+// Version-specific text for customer support roles. This reuses the same work
+// and support skills but changes the headline/about text and output filename.
 export const customerSupport = {
   slug: "customer-support",
   fileName: "Jonathan-Customer-Support-CV.pdf",

@@ -1,3 +1,5 @@
+// Shared work history used by multiple CV versions. Keeping it in one place
+// avoids copying the same job entries into every version file.
 export const standardWork = [
   {
     title: "System Developer Intern",
@@ -39,6 +41,8 @@ export const standardWork = [
   },
 ];
 
+// Technical skills reused by the IT support and customer support CVs.
+// Each skill can include an icon path from /public/icons.
 export const supportSkills = [
   { name: "ServiceNow", level: "Intermediate", icon: "/icons/servicenow.png" },
   { name: "Windows 10/11", level: "Intermediate", icon: "/icons/windows-10-11.png" },

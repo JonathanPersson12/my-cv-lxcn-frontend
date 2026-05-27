@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local CV export/debug artifacts
+/exports/
+/printpage.html
+/.backup-cv-template-v10/
+/backups/
+*.bak
+*.bak-*
+*.bak.*

@@ -160,6 +160,10 @@ img {
   - Make the exported PDF use more of the available page height.
   - Keep the blue sidebar full height.
   - Avoid printing UI buttons.
+
+  Learning note:
+  Printing HTML to PDF is sensitive to page size, element height, and scaling.
+  These rules make the visual "sheet" match the physical A4 page.
 */
 @media print {
   @page {
