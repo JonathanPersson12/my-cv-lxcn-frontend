@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pdf:it": "node scripts/export-cv-pdf.mjs it-support",
+    "pdf:customer": "node scripts/export-cv-pdf.mjs customer-support",
+    "pdf:service": "node scripts/export-cv-pdf.mjs service-practical",
+    "pdf:all": "npm run pdf:it && npm run pdf:customer && npm run pdf:service"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",

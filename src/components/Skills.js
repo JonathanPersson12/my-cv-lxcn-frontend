@@ -1,7 +1,6 @@
 import React from "react";
 import { FaCode, FaUsers } from "react-icons/fa";
 import Image from "next/image";
-import cvData, { theme } from "../data/cvData";
 
 const Skills = ({ techSkills, softSkills }) => {
   const getSkillLevel = (level) => {
@@ -32,24 +31,24 @@ const Skills = ({ techSkills, softSkills }) => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 skills">
       {/* Technical Skills */}
-      <div>
-        <div className="flex items-center gap-2 mb-6">
+      <div className="tech-skills-section">
+        <div className="flex items-center gap-2 mb-6 skill-heading-row">
           <div className="p-1 mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded">
             <FaCode className="text-white text-xs" />
           </div>
-          <h3 className="text-lg font-bold border-b border-gray-300 pb-1 mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent sm:whitespace-nowrap">
+          <h3 className="text-lg font-bold border-b border-gray-300 pb-1 mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent sm:whitespace-nowrap skill-heading-title">
             TECHNICAL SKILLS
           </h3>
         </div>
 
         {/* slightly tighter grid so long labels wrap nicer */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8 tech-skills-grid">
           {techSkills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center gap-1"
+              className="flex flex-col items-center text-center gap-1 tech-skill-item"
             >
               {skill.icon && (
                 <Image
@@ -57,13 +56,14 @@ const Skills = ({ techSkills, softSkills }) => {
                   alt={`${skill.name} icon`}
                   width={32}
                   height={32}
-                  className="object-contain"
+                  className="tech-skill-icon object-contain"
+                  data-skill-icon="true"
                   unoptimized
                 />
               )}
 
               {/* smaller, centered, clean wrapping for long names */}
-              <p className="text-[10px] leading-tight font-medium text-gray-800 break-words mt-1 max-w-[100px] text-center">
+              <p className="text-[11px] leading-tight font-medium text-gray-800 break-words mt-1 max-w-[100px] text-center tech-skill-label">
                 {skill.name}
               </p>
 
@@ -76,21 +76,21 @@ const Skills = ({ techSkills, softSkills }) => {
       </div>
 
       {/* Soft Skills*/}
-      <div>
-        <div className="flex items-center gap-2 mb-3">
+      <div className="soft-skills-section">
+        <div className="flex items-center gap-2 mb-3 skill-heading-row">
           <div className="p-1 mb-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded">
             <FaUsers className="text-white text-xs" />
           </div>
-          <h3 className="text-lg font-bold border-b border-gray-300 pb-1 mb-3 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h3 className="text-lg font-bold border-b border-gray-300 pb-1 mb-3 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent skill-heading-title">
             SOFT SKILLS
           </h3>
         </div>
 
-        <div className="space-y-1">
+        <div className="space-y-1 cv-soft-list">
           {softSkills.map((skill, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 rounded px-2 py-1 text-xs"
+              className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100 rounded px-2 py-1 text-xs cv-soft-item"
             >
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex-shrink-0"></div>
