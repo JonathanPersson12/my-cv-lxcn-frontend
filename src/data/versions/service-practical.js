@@ -17,8 +17,7 @@ export const servicePractical = {
         "Created weekly planning schedules for 15+ technician teams replacing electric meters across Skåne region",
         "Booked 30+ customer appointments per week and coordinated logistics, achieving 98% on-time completion rate",
         "Provided clear information to customers and followed up after completed work",
-        "Identified workflow bottlenecks and proposed improvements that reduced scheduling conflicts by 15%",
-        "Collaborated closely with customer service and technical teams to resolve scheduling issues within 24 hours",
+        "Collaborated with customer service and technical teams to resolve scheduling issues within 24 hours",
       ],
     },
     {
@@ -38,8 +37,7 @@ export const servicePractical = {
       period: "September 2025 – November 2025",
       details: [
         "Worked in a team environment with testing, documentation and problem-solving tasks",
-        "Participated in meetings and followed structured workflows using Azure DevOps",
-        "Showed ability to learn new systems and contribute carefully to shared work",
+        "Followed structured workflows using Azure DevOps and contributed carefully to shared work",
       ],
     },
   ],

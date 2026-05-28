@@ -11,12 +11,11 @@ export const baseCv = {
   },
   education: [
     {
-      title: "Web Development / System Developement with AI",
+      title: "Web Development / System Development with AI",
       school: "Lexicon",
       period: "Februari 2025 – August 2025",
       details: [
-        "Backend: C#, .NET, Entity Framework, LINQ, SQL, Azure DevOps (CI/CD), Flask/Django",
-        "Frontend: HTML, CSS, JavaScript, TypeScript, React, Tailwind, Bootstrap",
+        "Backend and frontend: C#, .NET, SQL, JavaScript, React, Tailwind and Bootstrap",
         "Moln & AI: Azure AI-tjänster, chattbots, datavisualisering med Python",
         "Metodik: Agile/Scrum, testmetodik, teknisk dokumentation",
       ],
@@ -27,9 +26,7 @@ export const baseCv = {
       period: "June 2024 – November 2024",
       details: [
         "Web Development 1, 100 points",
-        "The course covers basic web development and programming.",
-        "It provides an introduction to HTML, CSS, and JavaScript.",
-        "Students learn to create and design websites in WordPress.",
+        "Basic web development with HTML, CSS, JavaScript and WordPress",
       ],
     },
     {

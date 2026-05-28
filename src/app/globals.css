@@ -120,19 +120,19 @@ img {
   }
 
   .cv-sidebar {
-    width: 30.8% !important;
+    width: 29.5% !important;
     height: 297mm !important;
-    padding: 6.2mm 4.4mm !important;
-    gap: 4.6mm !important;
+    padding: 4.8mm 3.6mm !important;
+    gap: 3.4mm !important;
     background: var(--cv-sidebar) !important;
     border-right: 1px solid var(--cv-border) !important;
   }
 
   .cv-main {
-    width: 69.2% !important;
+    width: 70.5% !important;
     height: 297mm !important;
-    padding: 5.8mm 6.2mm 5mm 8.4mm !important;
-    gap: 2.8mm !important;
+    padding: 4.8mm 5.4mm 4.4mm 6.8mm !important;
+    gap: 2.2mm !important;
     background: #fff !important;
     overflow: visible !important;
   }
@@ -144,30 +144,30 @@ img {
   }
 
   .cv-photo {
-    width: 29mm !important;
-    height: 29mm !important;
+    width: 24mm !important;
+    height: 24mm !important;
     border-width: 2px !important;
     box-shadow: none !important;
   }
 
   .cv-photo-wrap {
-    margin-bottom: 2.4mm !important;
+    margin-bottom: 1.6mm !important;
   }
 
   .cv-name {
-    font-size: 15.5px !important;
+    font-size: 15.8px !important;
     line-height: 1.05 !important;
-    margin-bottom: 1.4mm !important;
+    margin-bottom: 1.1mm !important;
   }
 
   .cv-headline {
-    margin-bottom: 3mm !important;
+    margin-bottom: 2.1mm !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
   .cv-role {
-    font-size: 10.3px !important;
+    font-size: 11.4px !important;
     line-height: 1.18 !important;
     margin-bottom: 0.6mm !important;
   }
@@ -177,77 +177,77 @@ img {
   .cv-contact-row,
   .cv-contact-row a,
   .cv-contact-row span {
-    font-size: 8.4px !important;
-    line-height: 1.3 !important;
+    font-size: 10.2px !important;
+    line-height: 1.18 !important;
   }
 
   .cv-contact-list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.6mm !important;
+    gap: 1.2mm !important;
     text-align: left !important;
   }
 
   .cv-contact-row svg {
-    width: 3.3mm !important;
-    height: 3.3mm !important;
+    width: 3.1mm !important;
+    height: 3.1mm !important;
   }
 
   .cv-sidebar-heading,
   .skill-heading-row {
     display: flex !important;
     align-items: center !important;
-    gap: 1.6mm !important;
-    margin: 0 0 2.6mm 0 !important;
-    min-height: 5.2mm !important;
+    gap: 1.3mm !important;
+    margin: 0 0 1.8mm 0 !important;
+    min-height: 4.6mm !important;
   }
 
   .cv-sidebar-heading-icon,
   .cv-heading-icon {
-    width: 5.2mm !important;
-    height: 5.2mm !important;
-    min-width: 5.2mm !important;
-    min-height: 5.2mm !important;
+    width: 4.7mm !important;
+    height: 4.7mm !important;
+    min-width: 4.7mm !important;
+    min-height: 4.7mm !important;
     padding: 0 !important;
     margin: 0 !important;
     border-radius: 1.2mm !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    flex: 0 0 5.2mm !important;
+    flex: 0 0 4.7mm !important;
     overflow: visible !important;
   }
 
   .cv-sidebar-heading-icon svg,
   .cv-heading-icon svg {
-    width: 2.8mm !important;
-    height: 2.8mm !important;
+    width: 2.5mm !important;
+    height: 2.5mm !important;
   }
 
   .skill-heading-title,
   .cv-sidebar h2,
   .cv-sidebar h3 {
-    font-size: 12.2px !important;
+    font-size: 13.4px !important;
     line-height: 1.05 !important;
     margin: 0 !important;
     padding: 0 !important;
     white-space: nowrap !important;
     display: flex !important;
     align-items: center !important;
-    min-height: 5.2mm !important;
+    min-height: 4.6mm !important;
   }
 
   .cv-skills {
     display: flex !important;
     flex-direction: column !important;
-    gap: 4.2mm !important;
+    gap: 3mm !important;
   }
 
   .tech-skills-grid {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    column-gap: 2.6mm !important;
-    row-gap: 2.7mm !important;
+    column-gap: 1.7mm !important;
+    row-gap: 2mm !important;
   }
 
   .tech-skill-item {
@@ -262,46 +262,46 @@ img {
   img.tech-skill-icon,
   [data-skill-icon="true"] {
     display: block !important;
-    width: 5.8mm !important;
-    height: 5.8mm !important;
-    min-width: 5.8mm !important;
-    min-height: 5.8mm !important;
-    max-width: 5.8mm !important;
-    max-height: 5.8mm !important;
+    width: 5.1mm !important;
+    height: 5.1mm !important;
+    min-width: 5.1mm !important;
+    min-height: 5.1mm !important;
+    max-width: 5.1mm !important;
+    max-height: 5.1mm !important;
     object-fit: contain !important;
     margin: 0 auto !important;
   }
 
   .tech-skill-label {
-    font-size: 7.8px !important;
-    line-height: 1.12 !important;
-    max-width: 20mm !important;
+    font-size: 9.6px !important;
+    line-height: 1.06 !important;
+    max-width: 18mm !important;
     margin: 0 !important;
     font-weight: 600 !important;
   }
 
   .soft-skills-section {
-    margin-top: 1.8mm !important;
+    margin-top: 0.8mm !important;
   }
 
   .cv-soft-list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.5mm !important;
+    gap: 1mm !important;
   }
 
   .cv-soft-item {
     border: 1px solid #ead5f7 !important;
     border-radius: 1.2mm !important;
     background: #fdf7ff !important;
-    padding: 1.1mm 1.8mm !important;
-    font-size: 8.5px !important;
-    line-height: 1.15 !important;
+    padding: 0.75mm 1.3mm !important;
+    font-size: 10.2px !important;
+    line-height: 1.05 !important;
     font-weight: 600 !important;
   }
 
   .cv-language-list {
-    gap: 1.7mm !important;
+    gap: 1.6mm !important;
   }
 
   .cv-language-row {
@@ -309,36 +309,36 @@ img {
   }
 
   .cv-language-row img {
-    width: 4mm !important;
-    height: 4mm !important;
+    width: 4.8mm !important;
+    height: 4.8mm !important;
   }
 
   .cv-language-row div,
   .cv-language-row span {
-    font-size: 8.5px !important;
-    line-height: 1.2 !important;
+    font-size: 11.4px !important;
+    line-height: 1.1 !important;
   }
 
   .cv-section-heading {
     display: flex !important;
     align-items: center !important;
-    margin: 0 0 2.5mm 0.4mm !important;
-    min-height: 5.2mm !important;
+    margin: 0 0 1.7mm 0.4mm !important;
+    min-height: 4.8mm !important;
     overflow: visible !important;
   }
 
   .cv-section-heading h2,
   .cv-main h2 {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.05 !important;
     margin: 0 !important;
     letter-spacing: 0 !important;
   }
 
   .cv-profile-text {
-    font-size: 9.3px !important;
-    line-height: 1.36 !important;
-    margin: 0 0 3.2mm 0 !important;
+    font-size: 11.4px !important;
+    line-height: 1.24 !important;
+    margin: 0 0 2.4mm 0 !important;
     color: #334155 !important;
   }
 
@@ -349,35 +349,35 @@ img {
   }
 
   .cv-education-section .cv-section-heading {
-    margin-top: 3mm !important;
+    margin-top: 2mm !important;
   }
 
   .cv-entry-list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 2.7mm !important;
-    padding-left: 0.9mm !important;
+    gap: 1.8mm !important;
+    padding-left: 0.4mm !important;
     overflow: visible !important;
   }
 
   .cv-entry > .flex {
-    gap: 2mm !important;
+    gap: 1.5mm !important;
     overflow: visible !important;
   }
 
   .cv-entry-marker {
-    width: 4.8mm !important;
-    height: 4.8mm !important;
-    min-width: 4.8mm !important;
-    min-height: 4.8mm !important;
-    margin-top: 0.9mm !important;
+    width: 4.2mm !important;
+    height: 4.2mm !important;
+    min-width: 4.2mm !important;
+    min-height: 4.2mm !important;
+    margin-top: 0.7mm !important;
     box-shadow: none !important;
     overflow: visible !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     line-height: 0 !important;
-    flex: 0 0 4.8mm !important;
+    flex: 0 0 4.2mm !important;
     position: relative !important;
     left: 0 !important;
   }
@@ -394,43 +394,43 @@ img {
   }
 
   .cv-entry-marker svg {
-    width: 2.6mm !important;
-    height: 2.6mm !important;
-    min-width: 2.6mm !important;
-    min-height: 2.6mm !important;
+    width: 2.3mm !important;
+    height: 2.3mm !important;
+    min-width: 2.3mm !important;
+    min-height: 2.3mm !important;
     overflow: visible !important;
   }
 
   .cv-entry-card {
     background: #f8fafc !important;
     border: 1px solid #e5e7eb !important;
-    border-radius: 1.8mm !important;
+    border-radius: 1.5mm !important;
     box-shadow: none !important;
-    padding: 2.1mm 2.4mm !important;
+    padding: 1.55mm 1.9mm !important;
   }
 
   .cv-entry-header {
-    margin-bottom: 1.2mm !important;
+    margin-bottom: 0.9mm !important;
   }
 
   .cv-entry-title {
-    font-size: 11.6px !important;
-    line-height: 1.12 !important;
-    margin: 0 0 0.5mm 0 !important;
+    font-size: 14.4px !important;
+    line-height: 1.08 !important;
+    margin: 0 0 0.35mm 0 !important;
     color: #1f2937 !important;
   }
 
   .cv-entry-company,
   .cv-entry-company span {
-    font-size: 8.9px !important;
-    line-height: 1.12 !important;
+    font-size: 10.8px !important;
+    line-height: 1.08 !important;
     color: #6d28d9 !important;
   }
 
   .cv-entry-period {
-    font-size: 8px !important;
-    line-height: 1.1 !important;
-    margin-top: 0.5mm !important;
+    font-size: 10.2px !important;
+    line-height: 1.06 !important;
+    margin-top: 0.35mm !important;
     color: var(--cv-muted) !important;
   }
 
@@ -443,22 +443,22 @@ img {
   .cv-bullet-list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0.55mm !important;
+    gap: 0.45mm !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
   .cv-bullet {
-    gap: 1.3mm !important;
-    font-size: 8.25px !important;
-    line-height: 1.23 !important;
+    gap: 1mm !important;
+    font-size: 11.2px !important;
+    line-height: 1.18 !important;
     color: #374151 !important;
   }
 
   .cv-bullet svg {
-    width: 2mm !important;
-    height: 2mm !important;
-    margin-top: 0.45mm !important;
+    width: 1.7mm !important;
+    height: 1.7mm !important;
+    margin-top: 0.55mm !important;
   }
 
   .sheet * {
